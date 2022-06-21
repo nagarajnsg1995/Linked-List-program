@@ -4,7 +4,7 @@ package com.bridgrlabz;
 public class LinkedListLogic {
     Node head;
 
-    public void insertNode(int data) {
+    public void insertFirst(int data) {
         Node myNode = new Node(data);
         myNode.setData(data);
         myNode.setNext(head);
@@ -44,7 +44,7 @@ public class LinkedListLogic {
         Node presentNode = head;
         while (presentNode != null) {
             if (presentNode.data == data) {
-                System.out.println(data + " Number found in the list ");
+                System.out.println("Number " +data+ " found in the list:");
             }
             presentNode = presentNode.next;
         }
@@ -58,5 +58,18 @@ public class LinkedListLogic {
         Node node = new Node(data);
         node.next = presentNode.next;
         presentNode.next = node;
+    }
+
+    public void deleteAnyNumber(int data) {
+        Node presentNode = head, previousNode = head;
+        while (presentNode != null) {
+            if (presentNode.data == data) {
+                previousNode.next = presentNode.next;
+            }
+            previousNode = presentNode;
+            presentNode = presentNode.next;
+
+        }
+        System.out.println("removed:" +data);
     }
 }
