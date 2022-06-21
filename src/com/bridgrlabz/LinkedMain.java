@@ -13,5 +13,8 @@ public class LinkedMain {
         linkedListLogic.deleteAnyNumber(40);
 
         linkedListLogic.toPrint();
+        linkedListLogic.ascendingOrder();
+        linkedListLogic.toPrint();
+
     }
 }

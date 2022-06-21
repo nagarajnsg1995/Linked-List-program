@@ -39,6 +39,20 @@ public class LinkedListLogic {
         node.next = presentNode.next;
         presentNode.next = node;
     }
+    public void firstDelete() {
+        head = head.next;
+    }
+
+    public void lastDelete() {
+        Node presentNode = head, secondLast = null;
+        while (presentNode.next != null) {
+            secondLast = presentNode;
+            presentNode = presentNode.next;
+        }
+        if (secondLast != null) {
+            secondLast.next = null;
+        }
+    }
 
     public void searcNode(int data) {
         Node presentNode = head;
@@ -71,5 +85,25 @@ public class LinkedListLogic {
 
         }
         System.out.println("removed:" +data);
+    }
+    public void ascendingOrder() {
+        Node presentNode = head, index;
+        if (presentNode == null) {
+            System.out.println("List is empty");
+        }
+        while (presentNode != null) {
+            index = presentNode.getNext();
+            while (index != null) {
+                if (presentNode.getData() > index.getData()) {
+                    int temp = presentNode.getData();
+                    presentNode.setData(index.getData());
+                    index.setData(temp);
+                }
+                index = index.getNext();
+            }
+            presentNode = presentNode.getNext();
+        }
+        System.out.println("after ascending");
+
     }
 }
