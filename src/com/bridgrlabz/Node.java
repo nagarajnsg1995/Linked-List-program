@@ -28,6 +28,6 @@ public class Node {
 
 
    public void toPrint() {
-        System.out.print(" " + data);
+        System.out.println(" " + data);
     }
 }
