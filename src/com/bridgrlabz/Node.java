@@ -26,7 +26,8 @@ public class Node {
         this.next = next;
     }
 
-    public void toPrint() {
-        System.out.println(" " + data);
+
+   public void toPrint() {
+        System.out.print(" " + data);
     }
 }
