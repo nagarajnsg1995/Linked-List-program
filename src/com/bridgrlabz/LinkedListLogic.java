@@ -29,6 +29,7 @@ public class LinkedListLogic {
             presentNode = presentNode.next;
         }
     }
+
     public void insertBetween(int before, int after, int data) {
         Node presentNode = head;
         while (presentNode.data != before && presentNode.data != after) {
@@ -39,17 +40,13 @@ public class LinkedListLogic {
         presentNode.next = node;
     }
 
-//    public void firstDelete() {
-//        head = head.next;
-//    }
-    public void lastDelete() {
-        Node presentNode = head, secondLast = null;
-        while (presentNode.next != null) {
-            secondLast = presentNode;
+    public void searcNode(int data) {
+        Node presentNode = head;
+        while (presentNode != null) {
+            if (presentNode.data == data) {
+                System.out.println(data + " Number found in the list ");
+            }
             presentNode = presentNode.next;
-        }
-        if (secondLast != null) {
-            secondLast.next = null;
         }
     }
 }

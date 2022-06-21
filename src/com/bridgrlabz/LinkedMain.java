@@ -8,7 +8,7 @@ public class LinkedMain {
         linkedListLogic.insertLast(70);
         linkedListLogic.insertBetween(56, 70, 30);
         linkedListLogic.toPrint();
-        linkedListLogic.lastDelete();
+        linkedListLogic.searcNode(56);
 
         linkedListLogic.toPrint();
     }
